@@ -1,0 +1,59 @@
+      "publishDataFormat": {
+            "instanceName": "@VAR{instanceName}",
+            "msTick": "Integer:(@VAR{msTick})",
+            "timestamp": "Float:(@VAR{timestamp})",
+            "numSamples": "Integer:(@VAR{numSamples})",
+            "Scattering470": {
+                "value": "Integer:(@VAR{submatch[0]})",
+                "unit": "nm"
+            },
+            "470": {
+                "value": "Float:(0.00001181*(@VAR{submatch[1]} - 35))",
+                "unit": "B(0c) m^-1 sr^-1"
+            },
+            "Scattering532": {
+                "value": "Float:(@VAR{submatch[2]})",
+                "unit": "nm"
+            },
+            "532": {
+                "value": "Float:(0.000008216*(@VAR{submatch[3]} - 50))",
+                "unit": "B(0c) m^-1 sr^-1"
+            },
+            "Scattering650": {
+                "value": "Float:(@VAR{submatch[4]})",
+                "unit": "nm"
+            },
+            "650": {
+                "value": "Float:(0.00000411*(@VAR{submatch[5]} - 50))",
+                "unit": "B(0c) m^-1 sr^-1"
+        
+ Fluor:       "publishDataFormat": {
+            "instanceName": "@VAR{instanceName}",
+            "msTick": "Integer:(@VAR{msTick})",
+            "timestamp": "Float:(@VAR{timestamp})",
+            "numSamples": "Integer:(@VAR{numSamples})",
+            "chlorophyllWavelength": {
+                "value": "Integer:(@VAR{submatch[0]})",
+                "unit": "nm"
+            },
+            "chlorophyll": {
+                "value": "Float:(0.0121*(@VAR{submatch[1]} - 49))",
+                "unit": "ug/L"
+            },
+            "FDOMWavelength": {
+                "value": "Float:(@VAR{submatch[2]})",
+                "unit": "nm"
+            },
+            "FDOM": {
+                "value": "Float:(0.0914*(@VAR{submatch[3]} - 50))",
+                "unit": "ppb"
+            },
+            "phycocyaninWavelength": {
+                "value": "Float:(@VAR{submatch[4]})",
+                "unit": "nm"
+            },
+            "phycocyanin": {
+                "value": "Float:(0.0422*(@VAR{submatch[5]} - 46))",
+                "unit": "ppb"
+            }
+        },    }
