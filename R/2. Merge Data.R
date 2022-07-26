@@ -1,13 +1,13 @@
 library(TheSource)
 library(openxlsx)
 
-gps = readRDS('_rdata/gps 2022-07-16 203755.rdata')
-ctd1 = readRDS('_rdata/ctd 1 2022-07-16 204305.rdata')
-ctd2 = readRDS('_rdata/ctd 2 2022-07-16 204750.rdata')
+gps = readRDS('_rdata/gps.rdata')
+ctd1 = readRDS('_rdata/ctd 1.rdata')
+ctd2 = readRDS('_rdata/ctd 2.rdata')
 #eng = readRDS('_rdata/engineering ')
-fluoro1 = readRDS('_rdata/fluorometer 1 2022-07-16 204821.rdata')
-fluoro2 = readRDS('_rdata/fluorometer 2 2022-07-16 204825.rdata')
-analog = readRDS('_rdata/analog 2022-07-16 204818.rdata')
+fluoro1 = readRDS('_rdata/fluorometer 1.rdata')
+fluoro2 = readRDS('_rdata/fluorometer 2.rdata')
+analog = readRDS('_rdata/analog.rdata')
 
 
 ## bin time
@@ -83,8 +83,8 @@ for (i in 2:length(k)) {
   
 }
 
-saveRDS(transects, file = paste0('_rdata/transects ', gsub(':', '', Sys.time()),'.rdata'))
-saveRDS(dpi, file = paste0('_rdata/dpi ', gsub(':', '', Sys.time()),'.rdata'))
+saveRDS(transects, file = '_rdata/transects.rdata')
+saveRDS(dpi, file = '_rdata/dpi.rdata')
 
 for (i in 1:length(transects)) {
   #write.xlsx(transects[[i]], file = paste0('Publish/Transect ', gsub(':', '', transects[[i]]$Time[1]), '.xlsx'))
