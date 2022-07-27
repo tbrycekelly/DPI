@@ -42,3 +42,13 @@ load.dpi.files = function(files, skip = 1, min.size = 1024, verbose = T) {
   as.data.frame(dat)
 }
 
+
+make.time = function (year = NULL, month = 1, day = 1, hour = 0, minute = 0, second = 0, tz = 'GMT') {
+  if (is.null(year)) {return(Sys.time())}
+  as.POSIXct(paste0(year, '-', month, '-', day, ' ', hour, ':', minute, ':', second), tz = tz)
+}
+
+conv.time.unix = function(x, tz = 'GMT') {
+  if (any(is.POSIXct(x))) { return(x) }
+  as.POSIXct(x, origin = "1970-01-01", tz = tz)
+}
