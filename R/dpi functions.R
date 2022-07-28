@@ -49,6 +49,6 @@ make.time = function (year = NULL, month = 1, day = 1, hour = 0, minute = 0, sec
 }
 
 conv.time.unix = function(x, tz = 'GMT') {
-  if (any(is.POSIXct(x))) { return(x) }
+  #if (any(is.POSIXct(x))) { return(x) }
   as.POSIXct(x, origin = "1970-01-01", tz = tz)
 }

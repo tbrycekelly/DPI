@@ -1,3 +1,4 @@
+devtools::install_github('tbrycekelly/TheSource')
 library(TheSource)
 
 transects = readRDS('_rdata/transects.rdata')
