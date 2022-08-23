@@ -89,4 +89,5 @@ saveRDS(dpi, file = '_rdata/dpi.rdata')
 for (i in 1:length(transects)) {
   #write.xlsx(transects[[i]], file = paste0('Publish/Transect ', gsub(':', '', transects[[i]]$Time[1]), '.xlsx'))
   write.xlsx(transects[[i]], file = paste0('S:/Publish/Transect ', gsub(':', '', transects[[i]]$Time[1]), '.xlsx'))
+  saveRDS(transects[[i]], file = paste0('S:/Publish/Transect ', gsub(':', '', transects[[i]]$Time[1]), '.RDS'))
 }
