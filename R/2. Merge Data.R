@@ -17,7 +17,7 @@ dt = 1 #seconds
 gps$Time = conv.time.unix(round(as.numeric(gps$Time) * dt) / dt)
 ctd1$Time = conv.time.unix(round(as.numeric(ctd1$Time) * dt) / dt)
 ctd2$Time = conv.time.unix(round(as.numeric(ctd2$Time) * dt) / dt)
-eng$Time = conv.time.unix(round(as.numeric(eng$Time) * dt) / dt)
+#eng$Time = conv.time.unix(round(as.numeric(eng$Time) * dt) / dt)
 fluoro1$Time = conv.time.unix(round(as.numeric(fluoro1$Time) * dt) / dt)
 fluoro2$Time = conv.time.unix(round(as.numeric(fluoro2$Time) * dt) / dt)
 analog$Time = conv.time.unix(round(as.numeric(analog$Time) * dt) / dt)
@@ -54,9 +54,9 @@ for (n in names(fluoro2)[c(3,5,7)]) {
 }
 
 ## ENG
-for (n in names(eng)[-1]) {
-  dpi[[n]] = approx(as.numeric(eng$Time), eng[[n]], xout = as.numeric(dpi$Time), ties = mean)$y
-}
+#for (n in names(eng)[-1]) {
+#  dpi[[n]] = approx(as.numeric(eng$Time), eng[[n]], xout = as.numeric(dpi$Time), ties = mean)$y
+#}
 
 
 #### Filter
